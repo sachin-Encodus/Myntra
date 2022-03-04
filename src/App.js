@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Myntra React
+          Myntra React app
         </a>
       </header>
     </div>
