@@ -5,7 +5,7 @@ import Footer from '../components/footer/Footer';
 const HomeScreen = () => {
   return (
     <div>
-        {/* <Navbar /> */}
+        <Navbar />
         <Footer />
     </div>
   )
