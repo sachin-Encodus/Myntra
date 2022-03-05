@@ -1466,7 +1466,8 @@
             font-weight: 500;
             text-transform: uppercase
         }
-
+        
+        
         .desktop-query {
             width: 400px;
             float: right;
@@ -4210,4 +4211,28 @@
             cursor: default;
             border-radius: 4px
         }
-    
+        @media (max-width: 1440px){
+            .desktop-view{
+                display: none!important;
+            }
+        }
+        @media (max-width: 570px) {
+            .mobile-view{
+                 display: none!important;
+             }
+             .desktop-view{
+                 display: block!important;
+                 margin-left: 0px;
+                 font-weight: 500;
+                 color: #000;
+             }
+             .desktop-actions{
+                 position: relative;
+                 /* left: -600px; */
+                 top: 5px;
+             }
+             header{
+                 width: 100%;
+             }
+             
+         }
