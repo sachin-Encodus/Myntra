@@ -1,9 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import {BiMenu} from "react-icons/bi";
+import Modal from 'react-modal';
+import Bag from './../bag/Bag';
 const Navbar = () => {
+const [modal, setModal] = useState(false)
+const customStyles = {
+  content: {
+    top: '50%',
+    width:"50%",
+    left: '50%',
+    right: 'auto',
+    zIndex:9999,
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
   return (
     <>
+     <Modal
+        isOpen={modal}
+        // onAfterOpen={afterOpenModal}
+        // onRequestClose={closeModal}
+        // style={customStyles}
+        contentLabel="Example Modal"
+      ><Bag/></Modal>
       <div
         style={{ zIndex: 3 }}
         className="myx-header-container"
@@ -163,7 +185,7 @@ const Navbar = () => {
                     </span>
                   </a>
                   <a
-                    href="/checkout/cart"
+                    href="#"
                     className="desktop-cart"
                     data-reactid="865"
                   >
@@ -176,7 +198,7 @@ const Navbar = () => {
                     desktop-grey"
                       data-reactid="867"
                     ></span>
-                    <span className="desktop-userTitle mobile-view" data-reactid="868">
+                    <span onClick={()=>setModal(true)} className="desktop-userTitle mobile-view" data-reactid="868">
                       Bag
                     </span>
                   </a>

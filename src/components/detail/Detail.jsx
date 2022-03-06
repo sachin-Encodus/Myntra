@@ -1,7 +1,10 @@
 import React from 'react';
 import "./Detail.css";
 
-const Detail = () => {
+const Detail = ({data}) => {
+   console.log('====================================',data);
+   const {name,price, id, image, cutprice, desc, discount, size,buyers} = data;
+
 return (
 <>
 <main className="pdp-pdp-container">
@@ -15,51 +18,51 @@ return (
       <div className="image-grid-container common-clearfix">
          <div className="image-grid-col50">
             <div className="image-grid-imageContainer">
-               <div className="image-grid-image" style={{backgroundImage: `url(https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/9951411/2019/8/5/fe1322b7-9e53-4b6e-8423-0a4f5a9e8b4b1565006161882-Roadster-Men-Shirts-8701565006159466-1.jpg)`}}></div>
+               <div className="image-grid-image" style={{backgroundImage: `url(${image})`}}></div>
                <div className="image-grid-skeletonLoader"></div>
             </div>
          </div>
          <div className="image-grid-col50">
             <div className="image-grid-imageContainer">
-               <div className="image-grid-image" style={{backgroundImage: `url(&quot;https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2038068/2017/11/3/11509688615595-Roadster-Pack-of-2-Solid-Casual-Shirts-4501509688615429-2.jpg&quot;)`}}></div>
+               <div className="image-grid-image" style={{backgroundImage: `url(${image})`}}></div>
                <div className="image-grid-similarColorsCta undefined"><span className="myntraweb-sprite image-grid-similarColorsIcon sprites-similarProductsIcon"></span><span className="image-grid-iconText">VIEW SIMILAR</span></div>
                <div className="image-grid-skeletonLoader"></div>
             </div>
          </div>
          <div className="image-grid-col50">
             <div className="image-grid-imageContainer">
-            <div className="image-grid-image" style={{backgroundImage: `url(&quot;https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2038068/2017/11/3/11509688615595-Roadster-Pack-of-2-Solid-Casual-Shirts-4501509688615429-2.jpg&quot;)`}}></div>
+            <div className="image-grid-image" style={{backgroundImage: `url(${image})`}}></div>
                <div className="image-grid-skeletonLoader"></div>
             </div>
          </div>
          <div className="image-grid-col50">
             <div className="image-grid-imageContainer">
-            <div className="image-grid-image" style={{backgroundImage: `url(&quot;https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2038068/2017/11/3/11509688615595-Roadster-Pack-of-2-Solid-Casual-Shirts-4501509688615429-2.jpg&quot;)`}}></div>
+            <div className="image-grid-image" style={{backgroundImage: `url(${image})`}}></div>
                <div className="image-grid-skeletonLoader"></div>
             </div>
          </div>
          <div className="image-grid-col50">
             <div className="image-grid-imageContainer">
-            <div className="image-grid-image" style={{backgroundImage: `url(&quot;https://assets.myntassets.com/h_720,q_90,w_540/v1/assets/images/2038068/2017/11/3/11509688615595-Roadster-Pack-of-2-Solid-Casual-Shirts-4501509688615429-2.jpg&quot;)`}}></div>
+            <div className="image-grid-image" style={{backgroundImage: `url(${image})`}}></div>
                <div className="image-grid-skeletonLoader"></div>
             </div>
          </div>
       </div>
       <div className="pdp-description-container">
          <div className="pdp-price-info">
-            <h1 className="pdp-title">Roadster</h1>
-            <h1 className="pdp-name">Pack of 2 Solid Slim Fit Sustainable Casual Shirts</h1>
+            <h1 className="pdp-title">{name}</h1>
+            <h1 className="pdp-name">{desc}</h1>
             <div className="index-overallRatingContainer">
                <div className="index-overallRating">
                   <div>4.2</div>
                   <span className="myntraweb-sprite index-starIcon index-productRatingsExcellentIcon sprites-productRatingsExcellentIcon"></span>
                   <div className="index-separator">|</div>
                   <div className="index-ratingsCount">
-                    6.5 Ratings
+                    {buyers}
                   </div>
                </div>
             </div>
-            <p className="pdp-discount-container"><span className="pdp-price" tabindex="0"><strong>Rs. 1484</strong></span>
+            <p className="pdp-discount-container"><span className="pdp-price" tabindex="0"><strong>Rs. {price}</strong></span>
             <div className="pdp-mrp-verbiage" tabindex="0">
                <div><b>Price Details</b></div>
                <div>
@@ -71,14 +74,14 @@ return (
                <div>(Incl. of all taxes)</div>
                <hr />
                <div>
-                  <span className="pdp-mrp-verbiage-amt">45% OFF</span>
+                  <span className="pdp-mrp-verbiage-amt">{discount}</span>
                </div>
                <div><b>Selling Price</b><span className="pdp-mrp-verbiage-amt">Rs. 1484</span></div>
                <div style={{margin: "0px"}}>(Incl. of all taxes)</div>
             </div>
             <span className="pdp-mrp">
                <s>
-                 Rs. 1700
+                 Rs. {cutprice}
                </s>
             </span>
             <span className="pdp-discount">(45% OFF)</span></p>
