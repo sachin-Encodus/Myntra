@@ -13,7 +13,7 @@ const HomeScreen = () => {
          <Main />
          
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

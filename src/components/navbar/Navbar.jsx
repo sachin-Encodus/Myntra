@@ -1,15 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 import { BiMenu } from "react-icons/bi";
+// import Modal from 'react-modal';
+import Bag from "./../bag/Bag";
+import Modal from "../model/Model";
 const Navbar = () => {
+  const [modal, setModal] = useState(false);
+
   return (
     <>
+      {modal ? <Modal setModal={setModal} /> : null}
+
       <div style={{ zIndex: 3 }}>
-        <div>
-          <div>
             <header className="container">
-              <div className="dsk-bd">
-                <div className="logo">
+              <div className="dsk-bd" data-reactid="4">
+                <div className="logo " data-reactid="5">
                   <a
                     href="/"
                     className="myn-spr myn-logo header-logo mobile-view"
@@ -124,13 +129,23 @@ const Navbar = () => {
                       Wishlist
                     </span>
                   </a>
-                  <a href="/" className="dsk-cart">
+                  <a href="#" className="desktop-cart" data-reactid="865">
                     <span
                       className="myn-spr icon-bag spr-bag"
                       data-reactid="866"
                     ></span>
-                    <span className="dsk-bdg dsk-gry"></span>
-                    <span className="user-title mobile-view">Bag</span>
+                    <span
+                      className="desktop-badge 
+                    desktop-grey"
+                      data-reactid="867"
+                    ></span>
+                    <span
+                      onClick={() => setModal(true)}
+                      className="desktop-userTitle mobile-view"
+                      data-reactid="868"
+                    >
+                      Bag
+                    </span>
                   </a>
                 </div>
                 <div className="search-query mobile-view">
@@ -145,8 +160,6 @@ const Navbar = () => {
                 </div>
               </div>
             </header>
-          </div>
-        </div>
       </div>
     </>
   );

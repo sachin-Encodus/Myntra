@@ -1,0 +1,88 @@
+/* Dialog is hidden until it matches an anchor target */ 
+.overlay { 
+    position: fixed; 
+    top: 0; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.8); 
+    transition: opacity 250ms; 
+    /* visibility: hidden;  */
+    
+    visibility: visible; 
+    opacity: 1; 
+    /* Dialog fades in when it matches an anchor target */ 
+  } 
+ 
+   
+  .dialog-body { 
+    position: fixed; 
+    margin: 50px auto; 
+    width: 300px; 
+    padding: 50px; 
+    z-index: 999;
+    background: #fff; 
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); 
+    top: 45%;
+    width:50%;
+    left: 50%;
+    right: auto;
+    margin-right: 50%;
+    bottom: auto;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+  } 
+  .dialog-body h2 { 
+    margin-top: 0; 
+    font-family: sans-serif; 
+    color: #333; 
+  } 
+  .dialog-body .content { 
+    max-height: 400px; 
+    overflow: auto; 
+  } 
+  .dialog-body .close { 
+    position: absolute; 
+    width: 20px; 
+    height: 20px; 
+    top: 20px; 
+    right: 20px; 
+    color: #333; 
+    font-size: 24px; 
+    font-weight: bold; 
+    text-decoration: none; 
+  } 
+  .dialog-body .close:hover, .dialog-body .close:focus { 
+    color: #772222; 
+  } 
+   
+  /* Additional styling */ 
+  /* body { 
+    background-color: blanchedalmond; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+  }  */
+   
+  h1 { 
+    font-size: 3rem; 
+    color: indianred; 
+    font-family: "Berkshire Swash", cursive; 
+    text-align: center; 
+  } 
+   
+  .button { 
+    border: none; 
+    background-color: #333333; 
+    color: #fff; 
+    border-radius: 3px; 
+    padding: 16px; 
+    font-size: 1rem; 
+    font-family: sans-serif; 
+    text-decoration: none; 
+  } 
+  .button:hover, .button:focus { 
+    background-color: #772222; 
+  }

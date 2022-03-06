@@ -4,7 +4,7 @@ const Bag = () => {
 return (
 <>
 <div id="cartItemsList">
-   <br /><br /><br /><br />
+   
    <div className="itemContainer-base-itemMargin">
       <div>
          <div className="item-base-item">

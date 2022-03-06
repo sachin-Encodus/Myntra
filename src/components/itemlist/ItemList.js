@@ -1,12 +1,14 @@
 import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./Itemlist.css";
 const ItemList = ({ item }) => {
+  const navigate = useNavigate()
+  const NavigateToDetailPage = () =>{
+    console.log("===========>>>>>>>>>>>>>",item);
+    navigate('/detail', {state:item})
+  }
   return (
-    <div>
-      {/* <h1>{item.name}</h1> */}
-    
-          <ul >
-            <li class="product-base">
+    <li key={item.id}  onClick={()=> NavigateToDetailPage()} class="product-base">
               <div class="product-thumbShim"></div>
               <div class="product-ratingsContainer">
                 <span>{item.rating}</span>
@@ -16,9 +18,10 @@ const ItemList = ({ item }) => {
                   {item.buyers}
                 </div>
               </div>
-              <a
-                target="_blank"
-                href="shirts/hm/hm-women-white-oversized-cotton-shirt/15198496/buy"
+              
+              <Link
+                to=""
+            
                 style={{ display: "block" }}
               >
                 <div class="product-imageSliderContainer">
@@ -77,7 +80,7 @@ const ItemList = ({ item }) => {
                     </span>
                   </div>
                 </div>
-              </a>
+              </Link>
               <div class="image-grid-similarColorsCta product-similarItemCta">
                 <span class="myntraweb-sprite image-grid-similarColorsIcon sprites-similarProductsIcon"></span>
                 <span class="image-grid-iconText">VIEW SIMILAR</span>
@@ -88,7 +91,7 @@ const ItemList = ({ item }) => {
                   style={{ width: "100%", textAlign: "center" }}
                 >
                   <span class="myntraweb-sprite product-notWishlistedIcon sprites-notWishlisted"></span>
-                  Wishlist
+              wishlist
                 </span>
               </div>
               <div class="product-sizeDisplayDiv">
@@ -104,9 +107,8 @@ const ItemList = ({ item }) => {
                 </div>
               </div>
             </li>
-          </ul>
-     
-    </div>
+            
+
   );
 };
 
