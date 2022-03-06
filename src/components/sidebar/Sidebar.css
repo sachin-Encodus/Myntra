@@ -1,0 +1,52 @@
+.sidebar { 
+ 
+    height: calc(100vh - 50px); 
+    overflow-y: scroll; 
+    position: sticky; 
+    top: 0px; 
+    width: 300px; 
+    /* background-color: blue;  */
+  } 
+   
+  ::-webkit-scrollbar { 
+    width: 0; 
+  } 
+  ::-webkit-scrollbar-track { 
+    background-color: #f1f1f1; 
+  } 
+  ::-webkit-scrollbar-thumb { 
+    background-color: rgb(179, 179, 179); 
+  } 
+   
+  .sidebarWrapper { 
+    /* padding: 20px;  */
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    border-bottom: 1px solid #e9e9ed;
+    position: relative;
+    border-right: 1px solid #edebef;
+  } 
+  .sidebarWrapper ul {
+      margin-left: -20px;
+  }
+  .sidebarWrapper ul h2{
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.sidebarWrapper ul li{
+    font-size: 13px;
+    margin-bottom: 6px;
+    font-weight: 0;
+}
+.search-icon{
+    position: absolute;
+    top: 266px;
+    right: 31px;
+    width: 30px;
+    height: 30px;
+    color: #b3b3d3;
+}
+
+  
