@@ -1,9 +1,14 @@
-import React from 'react'
+import "./Sidebar.css";
 
-const sidebar = () => {
+export default function Sidebar() {
   return (
-    <div>sidebar</div>
-  )
-}
+    <div className="sidebar">
+      <div className="sidebarWrapper">
 
-export default sidebar
+        <button className="sidebarButton">Show More</button>
+        <hr className="sidebarHr" />
+       
+      </div>
+    </div>
+  );
+}
