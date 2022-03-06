@@ -49,4 +49,12 @@
     color: #b3b3d3;
 }
 
+
+
+@media  screen and (max-width:576px){
+  .sidebar{
+  display: none;
+  }
+  
+}
   

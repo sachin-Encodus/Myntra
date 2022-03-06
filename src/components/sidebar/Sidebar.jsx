@@ -4,12 +4,12 @@ import {
   FaSearch
 } from "react-icons/fa";
 
-const sidebar = () => {
+export default function Sidebar() {
   return (
     
       <div className="sidebar"> 
       <div className="sidebarWrapper"> 
-      <br /><br /><br />
+  
       
         <ul>
           <h2>Filters</h2>
@@ -58,5 +58,3 @@ const sidebar = () => {
     </div>
   )
 }
-
-export default sidebar
