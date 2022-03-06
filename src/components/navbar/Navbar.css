@@ -4211,7 +4211,7 @@
             cursor: default;
             border-radius: 4px
         }
-        @media (max-width: 1440px){
+        @media (max-width: 5100px){
             .desktop-view{
                 display: none!important;
             }
