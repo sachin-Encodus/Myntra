@@ -1,0 +1,185 @@
+
+.itemContainer-base-item {
+  background: #fff;
+  font-size: 14px;
+  border: 1px solid #eaeaec;
+  border-radius: 4px;
+  position: relative;
+  padding: 12px 12px 0;
+  
+}
+.itemContainer-base-itemMargin {
+  margin-bottom: 8px;
+}
+.itemContainer-base-itemMargin:last-child {
+  margin-bottom: 0;
+}
+.itemContainer-base-itemLeft {
+  position: absolute;
+}
+.itemContainer-base-itemRight {
+  padding-left: 12px;
+  position: relative;
+  min-height: 148px;
+  margin-left: 111px;
+  margin-bottom: 12px;
+}
+.itemContainer-base-brand,
+.itemContainer-base-itemLink,
+.itemContainer-base-itemName {
+  width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 16px;
+}
+.itemContainer-base-brand {
+  margin-bottom: 4px;
+}
+.itemContainer-base-details,
+.itemContainer-base-itemLink {
+  text-decoration: none;
+  padding-bottom: 0;
+  margin-right: 6px;
+}
+.itemContainer-base-itemLink {
+  display: block;
+}
+.itemContainer-base-details {
+  min-height: 97px;
+}
+.itemContainer-base-highlight {
+  color: #ff3f6c !important;
+}
+.itemContainer-base-inlineButton {
+  font-size: 13px !important;
+  letter-spacing: 0.5px;
+  padding: 0;
+}
+.itemContainer-base-itemActions {
+  line-height: 20px;
+}
+.itemContainer-base-itemActions:first-child {
+  width: 111px;
+}
+.itemContainer-base-editModal {
+  width: 10%;
+  top: 25%;
+}
+.itemContainer-base-brand {
+  font-weight: 600;
+}
+.itemContainer-base-comboOfferComplete {
+  margin-bottom: 8px;
+  padding: 12px;
+  background: #e5f6f2;
+  border: 1px solid #e5f6f2;
+  border-radius: 4px;
+}
+.itemContainer-base-comboOfferInComplete {
+  margin-bottom: 8px;
+  padding: 12px;
+  background: #fff1ec;
+  border: 1px solid #fff1ec;
+  border-radius: 4px;
+}
+.itemContainer-base-comboOfferComplete .itemContainer-base-item,
+.itemContainer-base-comboOfferInComplete .itemContainer-base-item {
+  border: none;
+}
+.itemContainer-base-comboOfferComplete:last-child,
+.itemContainer-base-comboOfferInComplete:last-child {
+  margin-bottom: 0;
+}
+.itemContainer-base-comboOffer:first-child {
+  margin-top: 0;
+}
+.itemContainer-base-comboText {
+  font-size: 16px;
+}
+.itemContainer-base-sizeAndQty {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 8px;
+}
+.itemContainer-base-sizeAndQtyContainer {
+  padding: 8px 0 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.itemContainer-base-amount {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+}
+.itemContainer-base-discountStrikedAmount {
+  position: absolute;
+  top: 32px;
+  right: 12px;
+}
+.itemContainer-base-strikedAmount {
+  color: #535766;
+}
+.itemContainer-base-tradeDiscount {
+  color: #f16565;
+  border-left: 1px solid #d4d5d9;
+  padding-left: 8px;
+}
+.itemContainer-base-couponDiscount {
+  padding-bottom: 6px;
+}
+.itemContainer-base-offerDiscountText {
+  border-left: 1px solid #d4d5d9;
+}
+.itemContainer-base-comboOfferComplete .itemContainer-base-disabledItem,
+.itemContainer-base-comboOfferInComplete .itemContainer-base-disabledItem,
+.itemContainer-base-disabledItem {
+  border: 1px solid #ff5722;
+}
+.itemContainer-base-bankOfferText {
+  cursor: pointer;
+  font-weight: 600;
+}
+.itemContainer-base-dropDown {
+  fill: #282c3f;
+  cursor: pointer;
+  position: relative;
+  margin-left: 4px;
+  top: -1px;
+}
+.itemContainer-base-selectionIndicator {
+  position: absolute;
+  left: -9px;
+  top: -12px;
+}
+.itemContainer-base-toolTipText {
+  white-space: pre-wrap;
+}
+.itemContainer-base-toolTipIcon {
+  fill: #94969f;
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+}
+.itemContainer-base-price {
+  display: flex;
+}
+.itemContainer-base-priceChangeTooltip {
+  padding: 12px;
+  left: -95px !important;
+  width: 125px;
+  font-size: 12px;
+}
+.itemContainer-base-tipStyle {
+  top: -8px !important;
+  left: 0 !important;
+}
+.itemContainer-base-closeIcon {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
