@@ -1,16 +1,12 @@
 import React from 'react'
 import "./Sidebar.css"
-import {
-  FaSearch
-} from "react-icons/fa";
+
 
 export default function Sidebar() {
   return (
     
       <div className="sidebar"> 
       <div className="sidebarWrapper"> 
-  
-      
         <ul>
           <h2>Filters</h2>
           <li><input type="radio" name="" id="" /> &nbsp; Men</li>
@@ -21,7 +17,7 @@ export default function Sidebar() {
         
         <ul>
         <h2>Brands</h2>
-        <span class="search-icon"><FaSearch /></span>
+        {/* <span class="search-icon"><FaSearch /></span> */}
           <li><input type="checkbox" name="" id="" /> Roadster</li>
           <li><input type="checkbox" name="" id="" /> Louis Philippe</li>
           <li><input type="checkbox" name="" id="" /> Spykar</li>
@@ -37,7 +33,7 @@ export default function Sidebar() {
         
         <ul>
         <h2>Color</h2>
-        <span class="search-icon"><FaSearch /></span>
+        {/* <span class="search-icon"><FaSearch /></span> */}
         <li><input type="checkbox" name="" id="" /> Blue <small>(1600)</small></li>
         <li><input type="checkbox" name="" id="" /> White <small>(1900)</small></li>
         <li><input type="checkbox" name="" id="" /> Black <small>(2600)</small></li>

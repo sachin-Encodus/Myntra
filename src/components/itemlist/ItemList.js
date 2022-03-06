@@ -88,6 +88,7 @@ const ItemList = ({ item }) => {
                   style={{ width: "100%", textAlign: "center" }}
                 >
                   <span class="myntraweb-sprite product-notWishlistedIcon sprites-notWishlisted"></span>
+                  Wishlist
                 </span>
               </div>
               <div class="product-sizeDisplayDiv">
