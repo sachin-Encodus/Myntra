@@ -14,32 +14,32 @@ const Footer = () => {
       
         <div style={{position: "relative"}}>
         <div id="web-footerMount">
-            <div style={{position:"relative",zIndex:"5" ,padding:"30px 0px 40px 0px",background:"#FAFBFC"}} data-reactroot=""
-                data-reactid="1" data-react-checksum="473104049">
-                <footer className="desktop-footerContainer" data-reactid="2">
-                    <div data-reactid="3">
-                        <div className="index-seoContainer" data-reactid="4">
-                            <div className="index-priceContainer" data-reactid="5">
-                                <h2 className="index-title" data-reactid="6">
+            <div style={{position:"relative",zIndex:"5" ,padding:"30px 0px 40px 0px",background:"#FAFBFC"}}
+                >
+                <footer className="desktop-footerContainer">
+                    <div>
+                        <div className="index-seoContainer" >
+                            <div className="index-priceContainer">
+                                <h2 className="index-title">
                                    
                                 </h2>
-                                <table style={{marginTop: "10px"}}  data-reactid="10">
-                                    <thead data-reactid="11">
-                                        <tr data-reactid="12">
-                                            <th data-reactid="13">Shirts For Men &amp; Women</th>
-                                            <th data-reactid="14">PRICE (RS)</th>
+                                <table style={{marginTop: "10px"}}>
+                                    <thead>
+                                        <tr>
+                                            <th>Shirts For Men &amp; Women</th>
+                                            <th>PRICE (RS)</th>
                                         </tr>
                                     </thead>
-                                    <tbody data-reactid="15"></tbody>
+                                    <tbody></tbody>
                                 </table>
-                                <div className="index-dateTitle" data-reactid="16">
+                                <div className="index-dateTitle">
                                     
                                 </div>
                             </div>
-                            <h2 className="index-title" data-reactid="19">
+                            <h2 className="index-title">
                                
                             </h2>
-                            <div className="index-descContainer" data-reactid="23">
+                            <div className="index-descContainer">
                                 <p>
                                     <strong>
                                         <h3>
@@ -163,16 +163,7 @@ const Footer = () => {
                                 <div itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
                                     <h3>VIDEO: <span itemprop="name">How to Tuck in a Shirt Properly - Men's Style
                                             Guide</span></h3><br/>
-                                    <meta itemprop="duration" content="PT1M17S" />
-                                    <meta itemprop="thumbnailUrl"
-                                        content="https://i.ytimg.com/vi/hGZ244SCZ-Y/hqdefault.jpg?sqp=-oaymwEZCPYBEIoBSFXyq4qpAwsIARUAAIhCGAFwAQ==&rs=AOn4CLCh3PJ14W7qjRfpg9kYWXKswroVfA" />
-                                    <meta itemprop="contentURL" content="https://www.youtube.com/watch?v=hGZ244SCZ-Y" />
-                                    <meta itemprop="embedURL" content="https://www.youtube.com/embed/hGZ244SCZ-Y" />
-                                    <meta itemprop="uploadDate" content="2014-12-2T08:00:00+08:00" />
-                                    <meta itemprop="expires" content="2050-07-27T08:00:00+08:00" />
-                                    <meta itemprop="height" content="315" />
-                                    <meta itemprop="width" content="315" />
-                                    <meta itemprop="interactionCount" content="38251" />
+                                    
                                     
                                         {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/hGZ244SCZ-Y"
                                             frameborder="0"
@@ -184,83 +175,81 @@ const Footer = () => {
                                             patterns, colours, cuts and styles. </p>
                                     </span>
                                 </div>
-                                
                             </div>
                         </div>
-                        <div className="desktop-genericInfo" data-reactid="24">
-                            <div className="desktop-shopLinks" data-reactid="25">
-                                <p className="desktop-gInfoTitle" data-reactid="26"><a href="/?src=onlineShopping"
-                                        data-reactid="27"> ONLINE SHOPPING </a></p>
-                                <a href="/shop/men" data-reactid="28">
+                        <div className="desktop-genericInfo">
+                            <div className="desktop-shopLinks">
+                                <p className="desktop-gInfoTitle"><a href="\" style={{textDecoration: "none", color: "#000"}}> ONLINE SHOPPING </a></p>
+                                <a href="/" >
                                     Men
                                 </a>
-                                <a href="/shop/women" data-reactid="32">
+                                <a href="/">
                                   Women
                                 </a>
-                                <a href="/shop/kids" data-reactid="36">
+                                <a href="/">
                                     Kids
                                 </a>
-                                <a href="/shop/home-living" data-reactid="40">
+                                <a href="/">
                                    Home &amp; Living
                                 </a>
-                                <a href="/personal-care" data-reactid="44">
+                                <a href="/">
                                   Beauty
-                                </a><a href="/giftcard" data-reactid="48">Gift Cards</a>
-                                <a href="/myntrainsider?cache=false" data-reactid="49">
+                                </a><a href="/">Gift Cards</a>
+                                <a href="/" >
                                     Myntra Insider
-                                    <span className="desktop-superscript" data-reactid="51"> New </span>
+                                    <span className="desktop-superscript"> New </span>
                                 </a>
                             </div>
-                            <div className="desktop-usefulLinks" data-reactid="52">
-                                <p className="desktop-gInfoTitle" data-reactid="53"> USEFUL LINKS </p>
-                                <a href="/contactus" data-reactid="54">
+                            <div className="desktop-usefulLinks" >
+                                <p className="desktop-gInfoTitle"> USEFUL LINKS </p>
+                                <a href="/">
                                     Contact Us
                                 </a>
-                                <a href="/faqs" data-reactid="58">
+                                <a href="/" >
                                    FAQ
                                 </a>
-                                <a href="/tac" data-reactid="62">
+                                <a href="/"  >
                                    T &amp; C
                                 </a>
-                                <a href="/termsofuse" data-reactid="66">
+                                <a href="/" >
                                     Terms Of Use
                                 </a>
-                                <a href="/my/orders" data-reactid="70">
+                                <a href="\">
                                     Track Orders
                                 </a>
-                                <a href="/faqs#shipping" data-reactid="74">
+                                <a href="/faqs#shipping">
                                     Shipping
                                 </a>
-                                <a href="/faqs#cancel" data-reactid="78">
+                                <a href="/faqs#cancel"  >
                                    Cancellation
                                 </a>
-                                <a href="/faqs#returns" data-reactid="82">
+                                <a href="/faqs#returns" >
                                    Returns
                                 </a>
-                                <a href="/security/whitehat" data-reactid="86">
+                                <a href="/security/whitehat"  >
                                     Whitehat
                                 </a>
-                                <a href="http://blog.myntra.com/" data-reactid="90">
+                                <a href="http://blog.myntra.com/"  >
                                     Blog
                                 </a>
-                                <a href="https://careers.myntra.com" data-reactid="94">
+                                <a href="https://careers.myntra.com" >
                                     Careers
                                 </a>
-                                <a href="/privacypolicy" data-reactid="98">
+                                <a href="/privacypolicy"  >
                                     Privacy Policy
                                 </a>
-                                <a href="/sitemap" data-reactid="102">
+                                <a href="/sitemap" >
                                     Site Map
                                 </a>
                                 
                             </div>
-                            <div className="desktop-appExperience" data-reactid="106">
-                                <p className="desktop-gInfoTitle" data-reactid="107"> EXPERIENCE MYNTRA APP ON MOBILE </p>
-                                <div className="desktop-downLinkContainer" data-reactid="108">
+                            <div className="desktop-appExperience" >
+                                <p className="desktop-gInfoTitle"> EXPERIENCE MYNTRA APP ON MOBILE </p>
+                                <div className="desktop-downLinkContainer" >
                                     <img src="https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png" alt="" style={{height:"42px"}}/>
                                         <img src="https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png" alt="" style={{height:"42px"}}/>  
                                 </div>
-                                <div className="desktop-keepInTouch" data-reactid="113"> KEEP IN TOUCH </div>
+                                <div className="desktop-keepInTouch"> KEEP IN TOUCH </div>
                                 
                                 <FaFacebookSquare className="desktop-facebook " style={{height:"20px", color: "#696e79"}} />
                                    
@@ -275,206 +264,206 @@ const Footer = () => {
                                 <FaInstagram className="desktop-instagra" style={{height:"20px", color: "#696e79"}}  />
                                     
                             </div>
-                            <div className="desktop-promises" data-reactid="122">
-                                <div className="desktop-section" data-reactid="123">
-                                    <div className="desktop-original" data-reactid="124">
+                            <div className="desktop-promises" >
+                                <div className="desktop-section" >
+                                    <div className="desktop-original" >
                                     <img src="https://constant.myntassets.com/web/assets/img/6c3306ca-1efa-4a27-8769-3b69d16948741574602902452-original.png" alt="" style={{height:"40px"}} />
                                     </div>
-                                    <div data-reactid="126"><strong data-reactid="127">100% ORIGINAL </strong>
+                                    <div ><strong >100% ORIGINAL </strong>
                                         guarantee for all products at myntra.com
                                        
                                     </div>
                                 </div>
-                                <div className="desktop-section" data-reactid="129">
-                                    <div className="desktop-return" data-reactid="130">
+                                <div className="desktop-section" >
+                                    <div className="desktop-return" >
                                     <img src="https://constant.myntassets.com/web/assets/img/ef05d6ec-950a-4d01-bbfa-e8e5af80ffe31574602902427-30days.png" alt="" style={{height:"40px"}} />
                                     </div>
-                                    <div data-reactid="132"><strong data-reactid="133">Return within 30days </strong>
+                                    <div ><strong >Return within 30days </strong>
                                         of receiving your order
                                         
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="desktop-popularSearch" data-reactid="135" style={{marginTop: "80px"}}>
-                            <div data-reactid="136">
-                                <hr data-reactid="137" />
-                                <div className="desktop-pSearchTitle" data-reactid="138"> POPULAR SEARCHES </div>
-                                <div className="desktop-pSearchlinks" data-reactid="139">
+                        <div className="desktop-popularSearch"  style={{marginTop: "80px"}}>
+                            <div >
+                                <hr  />
+                                <div className="desktop-pSearchTitle" > POPULAR SEARCHES </div>
+                                <div className="desktop-pSearchlinks" >
                                     
-                                    <a href="/shorts" data-reactid="141">
+                                    <a href="/shorts" >
                                         Shorts
                                     </a>
-                                    <a href="/jeans" data-reactid="145">
+                                    <a href="/jeans" >
                                        Jeans
                                     </a>
-                                    <a href="/party-wear" data-reactid="149">
+                                    <a href="/party-wear" >
                                        Party Wear
                                     </a>
-                                    <a href="/jackets" data-reactid="153">
+                                    <a href="/jackets" >
                                         Jackets
                                     </a>
-                                    <a href="/trousers" data-reactid="157">
+                                    <a href="/trousers" >
                                        Trousers 
                                     </a>
-                                    <a href="/jumpsuit" data-reactid="161">
+                                    <a href="/jumpsuit" >
                                         JumpSuit
                                     </a>
-                                    <a href="/innerwear" data-reactid="165">
+                                    <a href="/innerwear" >
                                        Innerwear
                                     </a>
-                                    <a href="/track-pants" data-reactid="169">
+                                    <a href="/track-pants" >
                                        Track Pants
                                     </a>
-                                    <a href="/ripped-jeans" data-reactid="173">
+                                    <a href="/ripped-jeans" >
                                         Ripped Jeans
                                     </a>
-                                    <a href="/coats" data-reactid="177">
+                                    <a href="/coats" >
                                         Coats
                                     </a>
-                                    <a href="/men-tshirts" data-reactid="181">
+                                    <a href="/men-tshirts" >
                                         Men Tshirts
                                     </a>
-                                    <a href="/capris" data-reactid="185">
+                                    <a href="/capris" >
                                         Capris
                                     </a>
-                                    <a href="/biker-jackets" data-reactid="189">
+                                    <a href="/biker-jackets" >
                                         Biker Jackets
                                     </a>
-                                    <a href="/shrug" data-reactid="193">
+                                    <a href="/shrug" >
                                         Shrug
                                     </a>
-                                    <a href="/tshirts" data-reactid="197">
+                                    <a href="/tshirts" >
                                        Tshirts
                                     </a>
-                                    <a href="/men-kurtas" data-reactid="201">
+                                    <a href="/men-kurtas" >
                                             Men Kurtas
                                     </a>
-                                    <a href="/kurta-pyjama" data-reactid="205">
+                                    <a href="/kurta-pyjama" >
                                        Kurta Pyjama
                                     </a>
-                                    <a href="/sweaters" data-reactid="209">
+                                    <a href="/sweaters" >
                                        Sweaters
                                     </a>
                                     
-                                    <a href="/thongs" data-reactid="293">
+                                    <a href="/thongs" >
                                         
                                         Thongs
                                         
                                     </a>
-                                    <a href="/sports-wear" data-reactid="297">
+                                    <a href="/sports-wear" >
                                       
                                         Sportswear
                                         
                                     </a>
-                                    <a href="/gym-wear" data-reactid="301">
+                                    <a href="/gym-wear" >
                                         
                                         Gym Wear
                                        
                                     </a>
-                                    <a href="/sweatshirts" data-reactid="305">
+                                    <a href="/sweatshirts" >
                                        
                                         Sweatshirts
                                         
                                     </a>
-                                    <a href="/men-tshirts" data-reactid="309">
+                                    <a href="/men-tshirts" >
                                        
                                       Men T Shirts
                                         
                                     </a>
-                                    <a href="/men-trousers" data-reactid="313">
+                                    <a href="/men-trousers" >
                                        
                                         Men Trousers
                                         
                                     </a>
-                                    <a href="/men-jackets" data-reactid="317">
+                                    <a href="/men-jackets" >
                                        
                                         Men Jackets
                                         
                                     </a>
-                                    <a href="/men-sweaters" data-reactid="321">
+                                    <a href="/men-sweaters" >
                                         
                                         Men Sweaters
                                        
                                     </a>
-                                    <a href="/men-shrugs" data-reactid="325">
+                                    <a href="/men-shrugs" >
                                        
                                       Men Shrugs
                                         
                                     </a>
-                                    <a href="/men-pants" data-reactid="329">
+                                    <a href="/men-pants" >
                                       
                                       Men Pants
                                         
                                     </a>
-                                    <a href="/men-jeans" data-reactid="333">
+                                    <a href="/men-jeans" >
                                         
                                     Men Jeans
                                         
                                     </a>
-                                    <a href="/men-track-pants" data-reactid="337">
+                                    <a href="/men-track-pants" >
                                       
                                         Men Track Pants
                                        
                                     </a>
-                                    <a href="/men-tshirts" data-reactid="181">
+                                    <a href="/men-tshirts" >
                                         Men Tshirts
                                     </a>
-                                    <a href="/capris" data-reactid="185">
+                                    <a href="/capris" >
                                         Capris
                                     </a>
-                                    <a href="/biker-jackets" data-reactid="189">
+                                    <a href="/biker-jackets" >
                                         Biker Jackets
                                     </a>
-                                    <a href="/shrug" data-reactid="193">
+                                    <a href="/shrug" >
                                         Shrug
                                     </a>
-                                    <a href="/tshirts" data-reactid="197">
+                                    <a href="/tshirts" >
                                        Tshirts
                                     </a>
-                                    <a href="/men-kurtas" data-reactid="201">
+                                    <a href="/men-kurtas" >
                                             Men Kurtas
                                     </a>
-                                    <a href="/kurta-pyjama" data-reactid="205">
+                                    <a href="/kurta-pyjama" >
                                        Kurta Pyjama
                                     </a>
-                                    <a href="/sweaters" data-reactid="209">
+                                    <a href="/sweaters" >
                                        Sweaters
                                     </a>
-                                    <a href="/men-tshirts" data-reactid="181">
+                                    <a href="/men-tshirts" >
                                         Men Tshirts
                                     </a>
-                                    <a href="/capris" data-reactid="185">
+                                    <a href="/capris" >
                                         Capris
                                     </a>
-                                    <a href="/biker-jackets" data-reactid="189">
+                                    <a href="/biker-jackets" >
                                         Biker Jackets
                                     </a>
-                                    <a href="/shrug" data-reactid="193">
+                                    <a href="/shrug" >
                                         Shrug
                                     </a>
-                                    <a href="/tshirts" data-reactid="197">
+                                    <a href="/tshirts" >
                                        Tshirts
                                     </a>
-                                    <a href="/men-kurtas" data-reactid="201">
+                                    <a href="/men-kurtas" >
                                             Men Kurtas
                                     </a>
-                                    <a href="/kurta-pyjama" data-reactid="205">
+                                    <a href="/kurta-pyjama" >
                                        Kurta Pyjama
                                     </a>
-                                    <a href="/sweaters" data-reactid="209">
+                                    <a href="/sweaters" >
                                        Sweaters
                                     </a>
                                 </div>
                                 
                             </div>
                         </div>
-                        <div className="desktop-fInfoSection" data-reactid="343">
-                            <div className="desktop-contact" data-reactid="344">
+                        <div className="desktop-fInfoSection" >
+                            <div className="desktop-contact" >
                                 In case of any concern,
-                               <a href="/contactus" data-reactid="346"> Contact Us </a>
+                               <a href="/contactus" > Contact Us </a>
                             </div>
-                            <div className="desktop-copywrite" data-reactid="347">
+                            <div className="desktop-copywrite" >
                                 2022
                                 www.myntra.com. All rights reserved.
                                 

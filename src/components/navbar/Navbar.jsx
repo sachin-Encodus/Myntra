@@ -129,19 +129,19 @@ const Navbar = () => {
                       Wishlist
                     </span>
                   </a>
-                  <a href="#" className="desktop-cart" data-reactid="865">
+                  <a href="#" className="dsk-cart" data-reactid="865">
                     <span
                       className="myn-spr icon-bag spr-bag"
                       data-reactid="866"
                     ></span>
                     <span
-                      className="desktop-badge 
-                    desktop-grey"
+                      className="dsk-bdg 
+                    dsk-gry"
                       data-reactid="867"
                     ></span>
                     <span
                       onClick={() => setModal(true)}
-                      className="desktop-userTitle mobile-view"
+                      className="user-title mobile-view"
                       data-reactid="868"
                     >
                       Bag

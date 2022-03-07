@@ -9,10 +9,11 @@ export default function Sidebar() {
       <div className="sidebarWrapper"> 
         <ul>
           <h2>Filters</h2>
-          <li><input type="radio" name="" id="" /> &nbsp; Men</li>
-          <li><input type="radio" name="" id="" /> &nbsp; Women</li>
-          <li><input type="radio" name="" id="" /> &nbsp; Boys</li>
-          <li><input type="radio" name="" id="" /> &nbsp; Girls</li>
+          <li><input type="radio" id="Men" name="fav_language" value="Men"/>
+<label for="Men">Men</label> </li>
+          <li><input type="radio" id="Women" name="fav_language" value="Women"/>
+<label for="Women">Women</label></li>
+         
         </ul>
         
         <ul>

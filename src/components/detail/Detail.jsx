@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Detail.css";
+import {FaStar} from "react-icons/fa"
 
 const Detail = ({data}) => {
    console.log('====================================',data);
@@ -25,32 +26,22 @@ return (
          <div className="image-grid-col50">
             <div className="image-grid-imageContainer">
                <div className="image-grid-image" style={{backgroundImage: `url(${image})`}}></div>
-               <div className="image-grid-similarColorsCta undefined"><span className="myntraweb-sprite image-grid-similarColorsIcon sprites-similarProductsIcon"></span><span className="image-grid-iconText">VIEW SIMILAR</span></div>
-               <div className="image-grid-skeletonLoader"></div>
-            </div>
-         </div>
-         <div className="image-grid-col50">
-            <div className="image-grid-imageContainer">
-            <div className="image-grid-image" style={{backgroundImage: `url(${image})`}}></div>
-               <div className="image-grid-skeletonLoader"></div>
-            </div>
-         </div>
-         <div className="image-grid-col50">
-            <div className="image-grid-imageContainer">
-            <div className="image-grid-image" style={{backgroundImage: `url(${image})`}}></div>
+               <div className="image-grid-similarColorsCta undefined"><span className="myn-spr image-grid-similarColorsIcon sprites-similarProductsIcon"></span><span className="image-grid-iconText">VIEW SIMILAR</span></div>
                <div className="image-grid-skeletonLoader"></div>
             </div>
          </div>
       </div>
       <div className="pdp-description-container">
          <div className="pdp-price-info">
-            <h1 className="pdp-title">{name}</h1>
-            <h1 className="pdp-name">{desc}</h1>
+            <span className="pdp-title">{name}</span>
+            <br />
+            <span className="pdp-name">{desc}</span>
+            <br /><br />
             <div className="index-overallRatingContainer">
                <div className="index-overallRating">
-                  <div>4.2</div>
-                  <span className="myntraweb-sprite index-starIcon index-productRatingsExcellentIcon sprites-productRatingsExcellentIcon"></span>
-                  <div className="index-separator">|</div>
+                  <div>4.2 <FaStar style={{color: "#72bfbc", fontSize: "13px"}}/> &nbsp; </div>
+                  <span className="myn-spr index-starIcon index-productRatingsExcellentIcon sprites-productRatingsExcellentIcon"></span>
+                  <div className="index-separator"> |</div>
                   <div className="index-ratingsCount">
                     {buyers}
                   </div>
@@ -193,17 +184,17 @@ return (
                ">
                <div className="pdp-add-to-bag pdp-button pdp-flex pdp-center
                   ">
-                  <span className="myntraweb-sprite pdp-whiteBag sprites-whiteBag pdp-flex pdp-center"></span>ADD TO BAG
+                  <span className="myn-spr pdp-whiteBag sprites-whiteBag pdp-flex pdp-center"></span>ADD TO BAG
                </div>
                <div className=" pdp-add-to-wishlist pdp-button pdp-add-to-wishlist pdp-button pdp-flex pdp-center
-                  "><span className="myntraweb-sprite pdp-notWishlistedIcon sprites-notWishlisted pdp-flex pdp-center "></span><span className="">WISHLIST</span></div>
+                  "><span className="myn-spr pdp-notWishlistedIcon sprites-notWishlisted pdp-flex pdp-center "></span><span className="">WISHLIST</span></div>
             </div>
          </div>
          
          <div>
             <div className="pincode-deliveryContainer">
                <h4>
-                  Delivery Options <span className="myntraweb-sprite pincode-deliveryOptionsIcon sprites-deliveryOptionsIcon"></span>
+                  Delivery Options <span className="myn-spr pincode-deliveryOptionsIcon sprites-deliveryOptionsIcon"></span>
                </h4>
                <div className="Address-switcher-container">
                   <div className="Address-address-box Address-pincode-input Address-pdp-box"><input type="tel" placeholder="Enter a PIN code" value="" /><button type="submit" className="Address-address-button" style={{color: "rgb(191, 192, 198)"}}>CHECK</button></div>
@@ -231,7 +222,7 @@ return (
          </div>
          <div className="pdp-offers-container">
             <h4>
-               BEST OFFERS <span className="myntraweb-sprite pdp-offers-similarColorsIcon sprites-bestOfferIcon"></span>
+               BEST OFFERS <span className="myn-spr pdp-offers-similarColorsIcon sprites-bestOfferIcon"></span>
             </h4>
             <div>
                <div className="pdp-offers-offer">
