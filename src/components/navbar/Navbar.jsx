@@ -4,28 +4,15 @@ import {BiMenu} from "react-icons/bi";
 import Modal from 'react-modal';
 import Bag from './../bag/Bag';
 const Navbar = () => {
-const [modal, setModal] = useState(false)
-const customStyles = {
-  content: {
-    top: '50%',
-    width:"50%",
-    left: '50%',
-    right: 'auto',
-    zIndex:9999,
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-  },
-};
+const [search, setSearch] = useState('');
+console.log('====================================',search);
+
+const [modal, setModal] = useState(false);
+
+;
   return (
     <>
-     <Modal
-        isOpen={modal}
-        // onAfterOpen={afterOpenModal}
-        // onRequestClose={closeModal}
-        // style={customStyles}
-        contentLabel="Example Modal"
-      ><Bag/></Modal>
+    
       <div
         style={{ zIndex: 3 }}
         className="myx-header-container"
@@ -207,7 +194,8 @@ const customStyles = {
                   <input
                     placeholder="Search for products, brands and more"
                     className="desktop-searchBar "
-                    value=""
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
                     data-reactid="870"
                   />
                   <a className="desktop-submit" href="/">

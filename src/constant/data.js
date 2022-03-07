@@ -13,7 +13,7 @@ export const data = [
     cutprice: "1999",
     desc: "Men Casual Cotton Shirt",
     image: IMAGES.img1,
-    username: "Safak Kocaoglu",
+    gender: "male",
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const data = [
     cutprice: "999",
     desc: "Men Casual Cotton Shirt",
     image: IMAGES.img2,
-    username: "Janell Shrum",
+    gender: "male",
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ export const data = [
     cutprice: "1999",
     desc: "Women Casual Shirt",
     image: IMAGES.img3,
-    username: "Alex Durden",
+    gender: "female",
   },
   {
     id: 4,
@@ -55,7 +55,7 @@ export const data = [
     cutprice: "1999",
     desc: "Semi-Sheer Casual Shirt",
     image: IMAGES.img4,
-    username: "Dora Hawks",
+    gender: "female",
   },
   {
     id: 5,
@@ -69,7 +69,7 @@ export const data = [
     cutprice: "1499",
     desc: "Men Casual Cotton Shirt",
     image: IMAGES.img5,
-    username: "Thomas Holden",
+    gender: "male",
   },
   {
     id: 6,
@@ -83,7 +83,7 @@ export const data = [
     cutprice: "1499",
     desc: "Men Casual Cotton Shirt",
     image: IMAGES.img6,
-    username: "Shirley Beauchamp",
+    gender: "male",
   },
   {
     id: 7,
@@ -97,7 +97,7 @@ export const data = [
     cutprice: "1849",
     desc: "Men Casual Cotton Shirt",
     image: IMAGES.img7,
-    username: "Travis Bennett",
+    gender: "male",
   },
   {
     id: 8,
@@ -111,7 +111,7 @@ export const data = [
     cutprice: "1299",
     desc: "Dobby Sheer Boxy Shirt",
     image: IMAGES.img8,
-    username: "Kristen Thomas",
+    gender: "female",
   },
   {
     id: 9,
@@ -125,7 +125,7 @@ export const data = [
     cutprice: "1899",
     desc: "Men Casual Cotton Shirt",
     image: IMAGES.img9,
-    username: "Gary Duty",
+    gender: "male",
   },
   {
     id: 10,
@@ -138,7 +138,7 @@ export const data = [
     cutprice: "1499",
     desc: "Men Casual Cotton Shirt",
     image: IMAGES.img10,
-    username: "Safak Kocaoglu",
+    gender: "male",
   },
   {
     id: 11,
@@ -152,7 +152,7 @@ export const data = [
 
     desc: "Women Checked Shirt",
     image: IMAGES.img11,
-    username: "Safak Kocaoglu",
+    gender: "female",
   },
   {
     id: 12,
@@ -166,7 +166,7 @@ export const data = [
 
     desc: "Dobby Sheer Boxy Shirt",
     image: IMAGES.img12,
-    username: "Janell Shrum",
+    gender: "female",
   },
   {
     id: 13,
@@ -179,7 +179,7 @@ export const data = [
     cutprice: "1649",
     desc: "Men Casual Cotton Shirt",
     image: IMAGES.img13,
-    username: "Alex Durden",
+    gender: "male",
   },
   {
     id: 14,
@@ -193,7 +193,7 @@ export const data = [
 
     desc: "Men Casual Cotton Shirt",
     image: IMAGES.img14,
-    username: "Dora Hawks",
+    gender: "male",
   },
   {
     id: 15,
@@ -207,7 +207,7 @@ export const data = [
 
     desc: "Regular Fit Casual Shirt",
     image: IMAGES.img15,
-    username: "Thomas Holden",
+    gender: "female",
   },
   {
     id: 16,
@@ -221,7 +221,7 @@ export const data = [
 
     desc: "Men Slim Fit Casual Shirt",
     image: IMAGES.img16,
-    username: "Shirley Beauchamp",
+    gender: "male",
   },
   {
     id: 17,
@@ -235,7 +235,7 @@ export const data = [
 
     desc: "Men Casual Cotton Shirt",
     image: IMAGES.img17,
-    username: "Travis Bennett",
+    gender: "male",
   },
   {
     id: 18,
@@ -249,7 +249,7 @@ export const data = [
 
     desc: "assets/person/8.jpeg",
     image: IMAGES.img18,
-    username: "Kristen Thomas",
+    gender: "female",
   },
   {
     id: 19,
@@ -263,7 +263,7 @@ export const data = [
 
     desc: "assets/person/9.jpeg",
     image: IMAGES.img19,
-    username: "Gary Duty",
+    gender: "male",
   },
   {
     id: 20,
@@ -277,7 +277,7 @@ export const data = [
 
     desc: "Slim Fit Casual Shirt",
     image: IMAGES.img20,
-    username: "Safak Kocaoglu",
+    gender: "male",
   },
 ];
 
