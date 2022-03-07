@@ -1,17 +1,68 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Main from "../../components/main/Main";
 import "./homeScreen.css";
+import { data } from "../../constant/data";
 const HomeScreen = () => {
+  const [search, setSearch] = useState("");
+  const [item, setitem] = useState(data);
+  const [filterItem, setFilterItem] = useState({
+    gender: null,
+    brand: [
+      { name: "Roadster", checked: false },
+      { name: "HIGHLANDER", checked: false },
+      { name: "SASSAFRAS", checked: false },
+    ],
+    pricerange: false,
+  });
+  console.log("=========>>>>>>>>>xxxxxxxxxxx", filterItem.pricerange);
+  const SetFilterData = () => {
+    const searchData = item.filter((i) =>
+      i.name.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+    );
+    setitem(searchData);
+  };
+  console.log("search", search);
+  useEffect(() => {
+    if (filterItem.gender !== null) {
+      const setGender = data.filter((i) => i.gender === filterItem.gender);
+
+      setitem(setGender);
+    }
+
+    if (filterItem.brand.some((e) => e.checked === true)) {
+      const check = filterItem.brand
+        .filter((i) => i.checked === true)
+        .map((p) => p.name);
+      const brandName = item.filter((t) => check.includes(t.name));
+      setitem(brandName);
+      console.log(item.filter((t) => check.includes(t.name)));
+    }
+    if (filterItem.pricerange) {
+      const SetPriceRange = item.filter(
+        (e) => e.price >= 600 && e.price <= 1000
+      );
+      setitem(SetPriceRange);
+      console.log("=============price", SetPriceRange);
+    }
+    // var arr1 = [1, 2, 3, 4],
+    //   arr2 = [2, 4],
+    //   res = arr1.filter((item) => arr2.includes(item));
+    // console.log(res);
+  }, [filterItem]);
+
   return (
     <div>
-      <Navbar />
+      <Navbar
+        search={search}
+        setSearch={setSearch}
+        SetFilterData={SetFilterData}
+      />
       <div className="app_home">
-        <Sidebar />
-         <Main />
-         
+        <Sidebar filterItem={filterItem} setFilterItem={setFilterItem} />
+        <Main data={item} />
       </div>
       <Footer />
     </div>
