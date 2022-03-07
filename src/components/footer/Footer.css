@@ -1,7 +1,15 @@
+
 .desktop-footerContainer {
 	max-width: 1080px;
 	margin: auto;
 	min-width: 980px;
+}
+@media screen and (max-width: 600px) {
+	.desktop-footerContainer {
+		/* max-width: 300px; */
+		/* margin: auto; */
+		/* min-width: 0px; */
+	}
 }
 .index-seoContainer {
 	padding: 20px 0 60px;
@@ -259,4 +267,15 @@ th {
 	flex: 1;
 	color: #94969f;
 	text-align: end
+}
+.table-content{
+	display: block;
+}
+@media (max-width: 600px){
+	.table-content{
+		display: none;
+	}
+	.display-none{
+		display: none;
+	}
 }

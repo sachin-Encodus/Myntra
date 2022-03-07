@@ -22,7 +22,7 @@ const Navbar = () => {
                     &nbsp;
                   </a>
 
-                  <a href="/home" className="desktop-view">
+                  <a href="/home" className="desktop-view" style={{textDecoration: "none"}}>
                     <BiMenu /> &nbsp; Myntra
                   </a>
                 </div>

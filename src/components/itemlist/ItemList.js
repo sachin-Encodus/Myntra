@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import {FaOpencart,FaRegHeart} from "react-icons/fa"
 import "./Itemlist.css";
 const ItemList = ({ item }) => {
   const navigate = useNavigate()
@@ -8,13 +9,15 @@ const ItemList = ({ item }) => {
     navigate('/detail', { state: item })
   }
   return (
+    <>
+    
     <li key={item.id} onClick={() => NavigateToDetailPage()} class="product-base">
       <div class="product-thumbShim"></div>
       <div class="product-ratingsContainer">
         <span>{item.rating}</span>
         <span class="myntraweb-sprite product-starIcon index-productRatingsExcellentIcon sprites-productRatingsExcellentIcon"></span>
         <div class="product-ratingsCount">
-          <div class="product-separator"> | </div>
+          <div class="product-separator"> &nbsp; &nbsp; | </div>
           {item.buyers}
         </div>
       </div>
@@ -83,7 +86,8 @@ const ItemList = ({ item }) => {
       </Link>
       <div class="image-grid-similarColorsCta product-similarItemCta">
         <span class="myntraweb-sprite image-grid-similarColorsIcon sprites-similarProductsIcon"></span>
-        <span class="image-grid-iconText">VIEW SIMILAR</span>
+        <FaOpencart style={{verticalAlign: "middle"}}/>
+        <span class="image-grid-iconText" style={{fontSize: "12px"}}>VIEW SIMILAR</span>
       </div>
       <div class="product-actions ">
         <span
@@ -91,6 +95,7 @@ const ItemList = ({ item }) => {
           style={{ width: "100%", textAlign: "center" }}
         >
           <span class="myntraweb-sprite product-notWishlistedIcon sprites-notWishlisted"></span>
+          <FaRegHeart/> &nbsp;
           wishlist
         </span>
       </div>
@@ -108,7 +113,7 @@ const ItemList = ({ item }) => {
       </div>
     </li>
 
-
+    </>
   );
 };
 

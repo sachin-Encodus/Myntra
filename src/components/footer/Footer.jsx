@@ -23,7 +23,7 @@ const Footer = () => {
                                 <h2 className="index-title">
                                    
                                 </h2>
-                                <table style={{marginTop: "10px"}}>
+                                <table style={{marginTop: "10px"}} className="table-content">
                                     <thead>
                                         <tr>
                                             <th>Shirts For Men &amp; Women</th>
@@ -39,7 +39,7 @@ const Footer = () => {
                             <h2 className="index-title">
                                
                             </h2>
-                            <div className="index-descContainer">
+                            <div className="index-descContainer display-none">
                                 <p>
                                     <strong>
                                         <h3>
@@ -243,7 +243,7 @@ const Footer = () => {
                                 </a>
                                 
                             </div>
-                            <div className="desktop-appExperience" >
+                            <div className="desktop-appExperience display-none" >
                                 <p className="desktop-gInfoTitle"> EXPERIENCE MYNTRA APP ON MOBILE </p>
                                 <div className="desktop-downLinkContainer" >
                                     <img src="https://constant.myntassets.com/web/assets/img/80cc455a-92d2-4b5c-a038-7da0d92af33f1539674178924-google_play.png" alt="" style={{height:"42px"}}/>
@@ -264,7 +264,7 @@ const Footer = () => {
                                 <FaInstagram className="desktop-instagra" style={{height:"20px", color: "#696e79"}}  />
                                     
                             </div>
-                            <div className="desktop-promises" >
+                            <div className="desktop-promises display-none" >
                                 <div className="desktop-section" >
                                     <div className="desktop-original" >
                                     <img src="https://constant.myntassets.com/web/assets/img/6c3306ca-1efa-4a27-8769-3b69d16948741574602902452-original.png" alt="" style={{height:"40px"}} />
@@ -285,7 +285,7 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="desktop-popularSearch"  style={{marginTop: "80px"}}>
+                        <div className="desktop-popularSearch display-none"  style={{marginTop: "80px"}}>
                             <div >
                                 <hr  />
                                 <div className="desktop-pSearchTitle" > POPULAR SEARCHES </div>
