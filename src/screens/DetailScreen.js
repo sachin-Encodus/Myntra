@@ -5,15 +5,15 @@ import Footer from '../components/footer/Footer';
 import { useLocation } from 'react-router-dom';
 
 const DetailScreen = () => {
-  const location = useLocation()
+  const location = useLocation();
 
   return (
     <>
-    <Navbar />
-    <Detail data={location.state} />
-    <Footer />
+      {/* <Navbar /> */}
+      <Detail data={location.state} />
+      <Footer />
     </>
-  )
+  );
 }
 
 export default DetailScreen

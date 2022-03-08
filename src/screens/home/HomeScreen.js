@@ -8,6 +8,7 @@ import { data } from "../../constant/data";
 const HomeScreen = () => {
   const [search, setSearch] = useState("");
   const [item, setitem] = useState(data);
+  const [wishList, setWishList] = useState([]);
   const [filterItem, setFilterItem] = useState({
     gender: null,
     brand: [
@@ -17,7 +18,7 @@ const HomeScreen = () => {
     ],
     pricerange: false,
   });
-  console.log("=========>>>>>>>>>xxxxxxxxxxx", filterItem.pricerange);
+  // console.log("=========>>>>>>>>>xxxxxxxxxxx", filterItem.pricerange);
   const SetFilterData = () => {
     const searchData = item.filter((i) =>
       i.name.toLocaleLowerCase().includes(search.toLocaleLowerCase())
@@ -45,7 +46,7 @@ const HomeScreen = () => {
         (e) => e.price >= 600 && e.price <= 1000
       );
       setitem(SetPriceRange);
-      console.log("=============price", SetPriceRange);
+      // console.log("=============price", SetPriceRange);
     }
     // var arr1 = [1, 2, 3, 4],
     //   arr2 = [2, 4],
@@ -53,16 +54,39 @@ const HomeScreen = () => {
     // console.log(res);
   }, [filterItem]);
 
+  const Shorting = (val) => {
+    // const pricedata1 = data.sort((a, b) => b.price - a.price);
+    // setitem([...pricedata1]);
+    // console.log("==============xxxxxxxxxxdescending", pricedata1);
+
+    if (val === "descending") {
+      const pricedata1 = item.sort((a, b) => b.price - a.price);
+      setitem([...pricedata1]);
+      console.log("==============xxxxxxxxxxdescending", pricedata1);
+    } else {
+      const pricedata2 = item.sort((a, b) => a.price - b.price);
+      console.log("==============xxxxxxxxxascending", pricedata2);
+      setitem([...pricedata2]);
+    }
+  };
+  console.log("===========>>>>>>>>w", wishList);
   return (
     <div>
       <Navbar
+        wishList={wishList}
         search={search}
         setSearch={setSearch}
         SetFilterData={SetFilterData}
+        setWishList={setWishList}
       />
       <div className="app_home">
         <Sidebar filterItem={filterItem} setFilterItem={setFilterItem} />
-        <Main data={item} />
+        <Main
+          data={item}
+          Shorting={Shorting}
+          setWishList={setWishList}
+          wishList={wishList}
+        />
       </div>
       <Footer />
     </div>

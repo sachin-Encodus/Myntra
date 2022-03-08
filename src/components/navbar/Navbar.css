@@ -192,7 +192,7 @@ sup {
   display: flex;
   line-height: 0;
   height: 40px;
-  margin: 20px 30px 0 10px;
+  margin: 20px  0px;
 }
 @media (max-width: 1400px) {
   .dsk-act {
@@ -250,6 +250,7 @@ sup {
   display: inline-block;
   padding-top: 10px;
   line-height: 6px;
+  text-decoration: none;
 }
 .spr-user {
   width: 24px;
@@ -264,6 +265,28 @@ sup {
   text-decoration: none;
   position: relative;
 }
+
+.wishlist-modal{
+  width: 300px;
+  /* display: none; */
+  height: 300px;
+  background-color: #ffffff;
+  padding: 10px;
+  position: absolute;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  overflow: scroll;
+  top: 45px;
+  right: -50px;
+  border-radius: 10px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); 
+}
+
+.wishlist-icon:hover  .wishlist-modal{
+  display: block;
+
+}
+
 .dsk-cart {
   margin: 0 50px 0 15px;
 }

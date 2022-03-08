@@ -4,8 +4,17 @@ import { BiMenu } from "react-icons/bi";
 // import Modal from 'react-modal';
 import Bag from "./../bag/Bag";
 import Modal from "../model/Model";
-const Navbar = ({ search, SetFilterData, setSearch }) => {
+import { useNavigate } from "react-router-dom";
+const Navbar = ({
+  search,
+  SetFilterData,
+  setSearch,
+  wishList,
+  setWishList,
+}) => {
+  const navigate = useNavigate();
   const [modal, setModal] = useState(false);
+  console.log("====================================", wishList.length);
 
   return (
     <>
@@ -19,7 +28,11 @@ const Navbar = ({ search, SetFilterData, setSearch }) => {
                 &nbsp;
               </a>
 
-              <a href="/home" className="desktop-view">
+              <a
+                href="/home"
+                className="desktop-view"
+                style={{ textDecoration: "none" }}
+              >
                 <BiMenu /> &nbsp; Myntra
               </a>
             </div>
@@ -31,8 +44,8 @@ const Navbar = ({ search, SetFilterData, setSearch }) => {
                       href="/"
                       data-color="#fb56c1"
                       data-type="navElements"
-                      style={{ borderBottomColor: "#ee5f73" }}
-                      className="dsk-imp mobile-view"
+                      style={{ borderBmobileottomColor: "#ee5f73" }}
+                      className="dsk-imp -view"
                     >
                       Men
                     </a>
@@ -120,25 +133,98 @@ const Navbar = ({ search, SetFilterData, setSearch }) => {
                   </span>
                 </div>
               </div>
-              <a href="/" className="wishlist-icon">
+              <div className="wishlist-icon">
                 <span className="myn-spr wishlist-icon spr-wishlist"></span>
-                <span className="user-title mobile-view" data-reactid="864">
-                  Wishlist
-                </span>
-              </a>
-              <a href="#" className="desktop-cart" data-reactid="865">
+                <a
+                  href="#"
+                  className="user-title mobile-view"
+                  data-reactid="864"
+                >
+                  <span>Wishlist</span>
+                </a>
+                <div className="wishlist-modal">
+                  {wishList.length > 0 ? (
+                    <div style={{ overflow: "scroll" }}>
+                      {wishList.map((i) => (
+                        <div
+                          onClick={() => navigate("/detail", { state: i })}
+                          key={i.id}
+                          style={{ width: "100%" }}
+                        >
+                          <div
+                            style={{
+                              display: "flex",
+                              marginTop: 10,
+                              marginBottom: 10,
+                            }}
+                          >
+                            <img
+                              src={i.image}
+                              style={{ width: 100, height: "auto" }}
+                            />
+                            <div style={{ padding: 10 }}>
+                              <p style={{ color: "#000", marginTop: 20 }}>
+                                {i.name}
+                              </p>
+                              <p style={{ color: "#000", marginTop: 20 }}>
+                                {i.desc}
+                              </p>
+                              <p style={{ color: "#000", marginTop: 20 }}>
+                                {i.price}
+                              </p>
+                              <button
+                                onClick={() =>
+                                  setWishList(
+                                    wishList.filter((p) => p.id !== i.id)
+                                  )
+                                }
+                                style={{
+                                  border: "none",
+                                  borderRadius: 10,
+                                  width: 150,
+                                  height: 50,
+                                  backgroundColor: "#FF3E6C",
+                                  fontSize: 16,
+                                  color: "#FFFFFF",
+                                }}
+                              >
+                                remove
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div
+                      style={{
+                        display: "flex",
+                        height: 200,
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                    >
+                      <h2 style={{ color: "#000000" }}>
+                        Add Item to Wishlist ❤️
+                      </h2>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              <a href="#" className="dsk-cart" data-reactid="865">
                 <span
                   className="myn-spr icon-bag spr-bag"
                   data-reactid="866"
                 ></span>
                 <span
-                  className="desktop-badge 
-                    desktop-grey"
+                  className="dsk-bdg 
+                    dsk-gry"
                   data-reactid="867"
                 ></span>
                 <span
                   onClick={() => setModal(true)}
-                  className="desktop-userTitle mobile-view"
+                  className="user-title mobile-view"
                   data-reactid="868"
                 >
                   Bag
