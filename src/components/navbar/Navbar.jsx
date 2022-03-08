@@ -244,6 +244,7 @@ const Navbar = () => {
 
               <div className="dsk-cart" data-reactid="865">
                 <span
+                  onClick={() => setModal(true)}
                   className="myn-spr icon-bag spr-bag"
                   data-reactid="866"
                 ></span>
@@ -264,24 +265,20 @@ const Navbar = () => {
                       borderRadius: 50,
                       position: "absolute",
                       top: -5,
-                      right: -5,
+                      right: -18,
                     }}
                   >
                     <p>{state.cartitem.length}</p>
                   </div>
                 ) : null}
-                <span
-                  onClick={() => setModal(true)}
-                  className="user-title mobile-view"
-                  data-reactid="868"
-                >
+                <span className="user-title mobile-view" data-reactid="868">
                   Bag
                 </span>
               </div>
             </div>
             <div className="search-query mobile-view">
               <input
-                placeholder="Search for products, brands and more"
+                placeholder="Search for  brands name only"
                 className="search-bar"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}

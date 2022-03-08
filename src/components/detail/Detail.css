@@ -100,7 +100,7 @@
   width: 58%;
 }
 .image-grid-col50 {
-  width: 49.5%;
+  width: 290px !important;
   float: left;
   margin-bottom: 1%;
   position: relative;
@@ -230,7 +230,7 @@
 .pdp-price-info {
   padding: 0 0 10px;
 }
-@media (min-width:600px){
+@media (min-width: 600px) {
   .pdp-price-info {
     margin-right: 0;
   }
@@ -640,7 +640,7 @@
   z-index: 1;
   margin-top: 15px;
 }
-@media (min-width:600px){
+@media (min-width: 600px) {
   .pdp-fixed {
     position: relative;
   }
@@ -824,7 +824,6 @@
     width: 70%;
     padding: 14px 15px;
   }
-  
 }
 .pdp-notWishlistedIcon,
 .pdp-wishlistedIcon {
@@ -1411,11 +1410,11 @@ div.pdp-offers-bullet {
 .pdp-offers-offerLikeBestPrice {
   margin-bottom: 16px;
 }
-@media (max-width: 600px){
-  .display-none{
+@media (max-width: 600px) {
+  .display-none {
     display: none;
   }
-  .breadcrumbs-container{
+  .breadcrumbs-container {
     display: none;
   }
   .image-grid-col50 {
@@ -1425,31 +1424,47 @@ div.pdp-offers-bullet {
     width: auto;
     border-bottom: 0px;
   }
-  .pdp-price-info{
+  .pdp-price-info {
     position: relative;
-    top: 510px;
-    left: -540px;
+    top: 540px;
+    left: -190px;
   }
-  .meta-container{
+  .meta-container {
     position: relative;
-    top: 342px;
+    top: -156px;
   }
-  .size-buttons-size-container{
+  .size-buttons-size-container {
     position: relative;
-    left: -540px;
-    top: 510px;
+    left: 0px;
+    top: 0px;
   }
- .display-footer-block{
-   margin-bottom: 400px;
- }
- .overflow-hidden{
-   overflow: hidden!important;
- }
- .mobile-wishlist{
-   margin-left: 49px;
- }
- .pdp-pdp-container{
-   min-width: 930px;
-   margin-top: 30px;
- }
+  .display-footer-block {
+    margin-bottom: -65px;
+  }
+  .overflow-hidden {
+    overflow: hidden !important;
+  }
+  .mobile-wishlist {
+    margin-left: 15px;
+  }
+  .pdp-pdp-container {
+    min-width: 85%;
+    margin-top: 30px;
+  }
+  .pdp-action-container {
+    position: relative;
+    left: 0px;
+    top: -365px;
+    width: 90%;
+  }
+  .pdp-discount-container {
+    position: relative !important;
+    left: 196px !important;
+    top: -530px !important;
+  }
+}
+@media (max-width: 450px) {
+  .dsk-act {
+    left: -525px !important;
+  }
 }

@@ -10,6 +10,13 @@ const ItemList = ({ item }) => {
     navigate("/detail", { state: item });
   };
 
+
+  const AddWishList = () => {
+    const exist = state.wishlist.find((x) => x.id === item.id);
+    if (!exist) {
+      dispatch({ type: "wishlist", payload: [...state.wishlist, item] });
+    }
+  };
   return (
     <>
       <li
@@ -87,12 +94,18 @@ const ItemList = ({ item }) => {
           class="product-actions "
           onClick={(e) => {
             e.stopPropagation();
-            dispatch({ type: "wishlist", payload: [...state.wishlist, item] });
+            AddWishList();
           }}
         >
           <span
             class="product-wishlistFlex product-actionsButton product-wishlist "
-            style={{ width: "100%", textAlign: "center" }}
+            style={{
+              width: "100%",
+              textAlign: "center",
+              backgroundColor: state.wishlist.find((x) => x.id === item.id)
+                ? "#FF3E6C"
+                : "white",
+            }}
           >
             <span class="myntraweb-sprite product-notWishlistedIcon sprites-notWishlisted"></span>
             <FaRegHeart /> &nbsp; wishlist
