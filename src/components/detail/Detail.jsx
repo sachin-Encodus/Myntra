@@ -1,6 +1,6 @@
 import React from "react";
 import "./Detail.css";
-import { FaStar,FaRegHeart,FaShoppingBag,FaOpencart } from "react-icons/fa";
+import { FaStar, FaRegHeart, FaShoppingBag, FaOpencart } from "react-icons/fa";
 
 const Detail = ({ data }) => {
   console.log("====================================", data);
@@ -62,7 +62,9 @@ const Detail = ({ data }) => {
                 ></div>
                 <div className="image-grid-similarColorsCta undefined">
                   <span className="myn-spr image-grid-similarColorsIcon sprites-similarProductsIcon"></span>
-                  <FaOpencart style={{verticalAlign: "middle",marginLeft: "10px"}}/>
+                  <FaOpencart
+                    style={{ verticalAlign: "middle", marginLeft: "10px" }}
+                  />
                   <span className="image-grid-iconText"> VIEW SIMILAR</span>
                 </div>
                 <div className="image-grid-skeletonLoader"></div>
@@ -70,7 +72,7 @@ const Detail = ({ data }) => {
             </div>
           </div>
           <div className="pdp-description-container">
-            <div className="pdp-price-info">
+            <div className="pdp-price-info  ">
               <span className="pdp-title">{name}</span>
               <br />
               <span className="pdp-name">{desc}</span>
@@ -266,14 +268,17 @@ const Detail = ({ data }) => {
                   "
                 >
                   <span className="myn-spr pdp-whiteBag sprites-whiteBag pdp-flex pdp-center"></span>
-                  <FaShoppingBag/> &nbsp; ADD TO BAG
+                  <FaShoppingBag /> &nbsp; ADD TO BAG
                 </div>
                 <div
                   className=" pdp-add-to-wishlist pdp-button pdp-add-to-wishlist pdp-button pdp-flex pdp-center
                   "
                 >
                   <span className="myn-spr pdp-notWishlistedIcon sprites-notWishlisted pdp-flex pdp-center "></span>
-                  <span className="mobile-wishlist"> <FaRegHeart/> &nbsp; WISHLIST</span>
+                  <span className="mobile-wishlist">
+                    {" "}
+                    <FaRegHeart /> &nbsp; WISHLIST
+                  </span>
                 </div>
               </div>
             </div>

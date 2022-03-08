@@ -9,7 +9,10 @@ export default function Main() {
 
   return (
     <section>
-      <div className="upperText" style={{ width: "100%", visibility: "hidden" }}>
+      <div
+        className="upperText"
+        style={{ width: "100%", visibility: "hidden" }}
+      >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
         iure, ex ratione eaque dignissimos recusandae minima veritatis quo
         voluptatem libero dolorem, accusantium consequuntur sed molestiae fugiat
