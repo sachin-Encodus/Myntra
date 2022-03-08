@@ -808,7 +808,11 @@
     font-size: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    display: block;
+    display: inline-block;
+    width: 42%;
+    position: relative;
+    left: -650px;
+    top: 60px;
   }
   .pdp-action-container .pdp-goToCart,
   .pdp-action-container button {
@@ -817,7 +821,7 @@
   }
   .pdp-add-to-wishlist {
     display: inline-block;
-    width: 30%;
+    width: 70%;
     padding: 14px 15px;
   }
   
@@ -1406,4 +1410,42 @@ div.pdp-offers-bullet {
 }
 .pdp-offers-offerLikeBestPrice {
   margin-bottom: 16px;
+}
+@media (max-width: 600px){
+  .display-none{
+    display: none;
+  }
+  .breadcrumbs-container{
+    display: none;
+  }
+  .image-grid-col50 {
+    width: 100%;
+  }
+  .index-overallRatingContainer {
+    width: auto;
+    border-bottom: 0px;
+  }
+  .pdp-price-info{
+    position: relative;
+    top: 555px;
+    left: -650px;
+  }
+  .meta-container{
+    position: relative;
+    top: 342px;
+  }
+  .size-buttons-size-container{
+    position: relative;
+    left: -650px;
+    top: 530px;
+  }
+ .display-footer-block{
+   margin-bottom: 400px;
+ }
+ .overflow-hidden{
+   overflow: hidden!important;
+ }
+ .mobile-wishlist{
+   margin-left: 72px;
+ }
 }

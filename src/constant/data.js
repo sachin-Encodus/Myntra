@@ -239,7 +239,7 @@ export const data = [
   },
   {
     id: 18,
-    name: "all about you",
+    name: "All about you",
     size: ["38", "40", "42", "44"],
     rating: "4.2",
     buyers: "722",
@@ -247,7 +247,7 @@ export const data = [
     discount: "(57% OFF)",
     cutprice: "1499",
 
-    desc: "assets/person/8.jpeg",
+    desc: "Slim Fit Casual Shirt",
     image: IMAGES.img18,
     username: "Kristen Thomas",
   },
@@ -261,7 +261,7 @@ export const data = [
     discount: "(40% OFF)",
     cutprice: "2499",
 
-    desc: "assets/person/9.jpeg",
+    desc: "Slim Fit Casual Shirt",
     image: IMAGES.img19,
     username: "Gary Duty",
   },

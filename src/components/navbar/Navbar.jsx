@@ -34,8 +34,8 @@ const Navbar = () => {
                           href="/"
                           data-color="#fb56c1"
                           data-type="navElements"
-                          style={{ borderBottomColor: "#ee5f73" }}
-                          className="dsk-imp mobile-view"
+                          style={{ borderBmobileottomColor: "#ee5f73" }}
+                          className="dsk-imp -view"
                         >
                           Men
                         </a>

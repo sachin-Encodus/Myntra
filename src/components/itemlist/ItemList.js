@@ -59,7 +59,7 @@ const ItemList = ({ item }) => {
           <h4 class="product-product">{item.desc}</h4>
           <h4 class="product-sizes">
             <span class="product-sizeNoInventoryPresent">
-              {item.size[0]},{" "}
+             Size: {item.size[0]},{" "}
             </span>
             <span class="product-sizeNoInventoryPresent">
               {item.size[1]},{" "}

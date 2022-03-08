@@ -19,13 +19,13 @@
   .dialog-body { 
     position: fixed; 
     margin: 50px auto; 
-    width: 300px; 
+    /* width: 300px;  */
     padding: 50px; 
     z-index: 999;
     background: #fff; 
     box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); 
     top: 45%;
-    width:50%;
+    width:80%;
     left: 50%;
     right: auto;
     margin-right: 50%;
@@ -85,4 +85,9 @@
   } 
   .button:hover, .button:focus { 
     background-color: #772222; 
+  }
+  @media (max-width: 600px){
+    .dialog-body{
+      padding: 25px;
+    }
   }

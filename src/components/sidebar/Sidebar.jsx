@@ -32,25 +32,25 @@ export default function Sidebar() {
         <li><input type="checkbox" name="" id="" /> Rs. 3 to Rs.  <small>(1700)</small></li>
         </ul>
         
-        <ul>
-        <h2>Color</h2>
+        {/* <ul>
+        <h2>Color</h2> */}
         {/* <span class="search-icon"><FaSearch /></span> */}
-        <li><input type="checkbox" name="" id="" /> Blue <small>(1600)</small></li>
+        {/* <li><input type="checkbox" name="" id="" /> Blue <small>(1600)</small></li>
         <li><input type="checkbox" name="" id="" /> White <small>(1900)</small></li>
         <li><input type="checkbox" name="" id="" /> Black <small>(2600)</small></li>
         <li><input type="checkbox" name="" id="" /> Green <small>(3680)</small></li>
         <li><input type="checkbox" name="" id="" /> NavyBlue <small>(200)</small></li>
         <li><input type="checkbox" name="" id="" /> pink <small>(170)</small></li>
-        </ul>
+        </ul> */}
         
-        <ul>
+        {/* <ul>
         <h2>Discount Range</h2>
           <li><input type="radio" name="" id="" /> 10% and above</li>
           <li><input type="radio" name="" id="" /> 20% and above</li>
           <li><input type="radio" name="" id="" /> 30% and above</li>
           <li><input type="radio" name="" id="" /> 40% and above</li>
           <br />
-        </ul>
+        </ul> */}
       </div> 
     </div>
   )
