@@ -9,7 +9,7 @@ const DetailScreen = () => {
 
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <Detail data={location.state} />
       <Footer />
     </>

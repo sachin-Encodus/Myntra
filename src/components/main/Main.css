@@ -15,8 +15,12 @@
 @media (max-width: 600px){
   .grid-wrapper{
     position: relative;
-    top: -0px;
+    top: -60px;
     place-items: center;
+    --auto-grid-min-size: 12rem;
+  }
+  .product-base{
+    width: 193px!important;
   }
 }
 .index-PageNotFoundContainer {

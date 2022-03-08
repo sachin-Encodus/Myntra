@@ -192,7 +192,7 @@ sup {
   display: flex;
   line-height: 0;
   height: 40px;
-  margin: 20px  0px;
+  margin: 18px 0px;
 }
 @media (max-width: 1400px) {
   .dsk-act {
@@ -268,7 +268,7 @@ sup {
 
 .wishlist-modal{
   width: 300px;
-  /* display: none; */
+  display: none;
   height: 300px;
   background-color: #ffffff;
   padding: 10px;
@@ -276,7 +276,7 @@ sup {
   margin-bottom: 20px;
   margin-top: 20px;
   overflow: scroll;
-  top: 45px;
+  top: 35px;
   right: -50px;
   border-radius: 10px;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.5); 
@@ -431,7 +431,7 @@ a.query-submit {
   margin: 0 0px 0 0px;
 }
 .wishlist-icon {
-  margin: 0 0px 0 0px;
+  margin: 0 8px 0 0px;
 }
 header{
   overflow: hidden;
@@ -452,7 +452,7 @@ header{
       /* margin-left: -532px; */
       width: 200px;
       position: relative;
-      left: -465px;
+      left: -525px;
       top: 7px;
       display: flex;
   }

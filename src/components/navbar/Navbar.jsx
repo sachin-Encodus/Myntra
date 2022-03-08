@@ -1,20 +1,23 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { BiMenu } from "react-icons/bi";
 // import Modal from 'react-modal';
 import Bag from "./../bag/Bag";
 import Modal from "../model/Model";
-import { useNavigate } from "react-router-dom";
-const Navbar = ({
-  search,
-  SetFilterData,
-  setSearch,
-  wishList,
-  setWishList,
-}) => {
+import { Link, useNavigate } from "react-router-dom";
+import { Product } from "../../App";
+const Navbar = () => {
   const navigate = useNavigate();
+  const { state, dispatch } = useContext(Product);
   const [modal, setModal] = useState(false);
-  console.log("====================================", wishList.length);
+  const [search, setSearch] = useState("");
+  const SetFilterData = () => {
+    const searchData = state.product.filter((i) =>
+      i.name.toLocaleLowerCase().includes(search.toLocaleLowerCase())
+    );
+    dispatch({ type: "product", payload: searchData });
+    // setitem(searchData);
+  };
 
   return (
     <>
@@ -135,23 +138,43 @@ const Navbar = ({
               </div>
               <div className="wishlist-icon">
                 <span className="myn-spr wishlist-icon spr-wishlist"></span>
+                {state.wishlist.length > 0 ? (
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: 20,
+                      height: 20,
+                      backgroundColor: "red",
+                      borderRadius: 50,
+                      position: "absolute",
+                      top: -5,
+                      right: -5,
+                    }}
+                  >
+                    <p>{state.wishlist.length}</p>
+                  </div>
+                ) : null}
+
                 <a
                   href="#"
                   className="user-title mobile-view"
                   data-reactid="864"
                 >
-                  <span>Wishlist</span>
+                  <span>wishlist </span>
                 </a>
                 <div className="wishlist-modal">
-                  {wishList.length > 0 ? (
+                  {state.wishlist.length > 0 ? (
                     <div style={{ overflow: "scroll" }}>
-                      {wishList.map((i) => (
+                      {state.wishlist.map((i) => (
                         <div
-                          onClick={() => navigate("/detail", { state: i })}
+                          // onClick={() => navigate("/detail", { state: i })}
                           key={i.id}
                           style={{ width: "100%" }}
                         >
                           <div
+                            onClick={() => navigate("/detail", { state: i })}
                             style={{
                               display: "flex",
                               marginTop: 10,
@@ -163,21 +186,28 @@ const Navbar = ({
                               style={{ width: 100, height: "auto" }}
                             />
                             <div style={{ padding: 10 }}>
-                              <p style={{ color: "#000", marginTop: 20 }}>
-                                {i.name}
-                              </p>
-                              <p style={{ color: "#000", marginTop: 20 }}>
-                                {i.desc}
-                              </p>
-                              <p style={{ color: "#000", marginTop: 20 }}>
-                                {i.price}
-                              </p>
+                              <div>
+                                <p style={{ color: "#000", marginTop: 20 }}>
+                                  {i.name}
+                                </p>
+                                <p style={{ color: "#000", marginTop: 20 }}>
+                                  {i.desc}
+                                </p>
+                                <p style={{ color: "#000", marginTop: 20 }}>
+                                  {i.price}
+                                </p>
+                              </div>
                               <button
-                                onClick={() =>
-                                  setWishList(
-                                    wishList.filter((p) => p.id !== i.id)
-                                  )
-                                }
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  // console.log("==========>>>>>>>function");
+                                  dispatch({
+                                    type: "wishlist",
+                                    payload: state.wishlist.filter(
+                                      (p) => p.id !== i.id
+                                    ),
+                                  });
+                                }}
                                 style={{
                                   border: "none",
                                   borderRadius: 10,
@@ -205,14 +235,14 @@ const Navbar = ({
                       }}
                     >
                       <h2 style={{ color: "#000000" }}>
-                        Add Item to Wishlist ❤️
+                        Add Item to wishlist ❤️
                       </h2>
                     </div>
                   )}
                 </div>
               </div>
 
-              <a href="#" className="dsk-cart" data-reactid="865">
+              <div className="dsk-cart" data-reactid="865">
                 <span
                   className="myn-spr icon-bag spr-bag"
                   data-reactid="866"
@@ -222,6 +252,24 @@ const Navbar = ({
                     dsk-gry"
                   data-reactid="867"
                 ></span>
+                {state.cartitem.length > 0 ? (
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      width: 20,
+                      height: 20,
+                      backgroundColor: "red",
+                      borderRadius: 50,
+                      position: "absolute",
+                      top: -5,
+                      right: -5,
+                    }}
+                  >
+                    <p>{state.cartitem.length}</p>
+                  </div>
+                ) : null}
                 <span
                   onClick={() => setModal(true)}
                   className="user-title mobile-view"
@@ -229,7 +277,7 @@ const Navbar = ({
                 >
                   Bag
                 </span>
-              </a>
+              </div>
             </div>
             <div className="search-query mobile-view">
               <input

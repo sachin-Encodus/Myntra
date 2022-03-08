@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { Product } from "../../App";
+import { data } from "../../constant/data";
 import "./Sidebar.css";
 
-export default function Sidebar({ filterItem, setFilterItem }) {
+export default function Sidebar() {
+  const { state, dispatch } = useContext(Product);
   const handleChange = (slug) => {
-    const copyProducts = [...filterItem.brand];
+    const copyProducts = [...state.filterData.brand];
     const modifiedProducts = copyProducts.map((product) => {
       if (slug === product.name) {
         product.checked = !product.checked;
@@ -13,9 +16,45 @@ export default function Sidebar({ filterItem, setFilterItem }) {
     });
     // console.log("====================================", modifiedProducts);
 
-    setFilterItem({ ...filterItem, brand: modifiedProducts });
+    dispatch({
+      type: "filterData",
+      payload: { ...state.filterData, brand: modifiedProducts },
+    });
     // setProducts(modifiedProducts);
   };
+
+  useEffect(() => {
+    if (state.filterData.gender !== null) {
+      const setGender = data.filter(
+        (i) => i.gender === state.filterData.gender
+      );
+
+      dispatch({ type: "product", payload: setGender });
+    }
+
+    if (state.filterData.brand.some((e) => e.checked === true)) {
+      const check = state.filterData.brand
+        .filter((i) => i.checked === true)
+        .map((p) => p.name);
+      const brandName = state.product.filter((t) => check.includes(t.name));
+      dispatch({ type: "product", payload: brandName });
+
+      console.log(state.product.filter((t) => check.includes(t.name)));
+    }
+    if (state.filterData.pricerange) {
+      const SetPriceRange = state.product.filter(
+        (e) => e.price >= 600 && e.price <= 1000
+      );
+      dispatch({ type: "product", payload: SetPriceRange });
+
+      // console.log("=============price", SetPriceRange);
+    }
+    // var arr1 = [1, 2, 3, 4],
+    //   arr2 = [2, 4],
+    //   res = arr1.filter((item) => arr2.includes(item));
+    // console.log(res);
+  }, [state.filterData]);
+  console.log("=========>>>>>>>>>xxxxxxxxxxx", state.filterData);
   return (
     <div className="sidebar">
       <div className="sidebarWrapper">
@@ -28,7 +67,10 @@ export default function Sidebar({ filterItem, setFilterItem }) {
               id="male"
               value="male"
               onChange={(e) =>
-                setFilterItem({ ...filterItem, gender: e.target.value })
+                dispatch({
+                  type: "filterData",
+                  payload: { ...state.filterData, gender: e.target.value },
+                })
               }
             />{" "}
             &nbsp; Men
@@ -40,7 +82,10 @@ export default function Sidebar({ filterItem, setFilterItem }) {
               id="female"
               value="female"
               onChange={(e) =>
-                setFilterItem({ ...filterItem, gender: e.target.value })
+                dispatch({
+                  type: "filterData",
+                  payload: { ...state.filterData, gender: e.target.value },
+                })
               }
             />{" "}
             &nbsp; Women
@@ -50,7 +95,7 @@ export default function Sidebar({ filterItem, setFilterItem }) {
         <ul>
           <h2>Brands</h2>
           {/* <span class="search-icon"><FaSearch /></span> */}
-          {filterItem.brand.map((item) => (
+          {state.filterData.brand.map((item) => (
             <li key={item.name}>
               <input
                 type="checkbox"
@@ -80,9 +125,12 @@ export default function Sidebar({ filterItem, setFilterItem }) {
               name="800"
               id="800"
               onChange={(e) =>
-                setFilterItem({
-                  ...filterItem,
-                  pricerange: !filterItem.pricerange,
+                dispatch({
+                  type: "filterData",
+                  payload: {
+                    ...state.filterData,
+                    pricerange: !state.filterData.pricerange,
+                  },
                 })
               }
             />{" "}
@@ -100,7 +148,6 @@ export default function Sidebar({ filterItem, setFilterItem }) {
         <li><input type="checkbox" name="" id="" /> NavyBlue <small>(200)</small></li>
         <li><input type="checkbox" name="" id="" /> pink <small>(170)</small></li>
         </ul> */}
-
         {/* <ul>
         <h2>Discount Range</h2>
           <li><input type="radio" name="" id="" /> 10% and above</li>

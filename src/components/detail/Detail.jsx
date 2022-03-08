@@ -1,16 +1,34 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Detail.css";
-import { FaStar,FaRegHeart,FaShoppingBag,FaOpencart } from "react-icons/fa";
+import { FaStar, FaRegHeart, FaShoppingBag, FaOpencart } from "react-icons/fa";
+import { Product } from "../../App";
+import { Navigate } from "react-router-dom";
 
 const Detail = ({ data }) => {
-  console.log("====================================", data);
   const { name, price, id, image, cutprice, desc, discount, size, buyers } =
-    data;
-
+    data && data;
+  const { state, dispatch } = useContext(Product);
+  console.log("====================================", state.cartitem);
+  const onAdd = (item) => {
+    const exist = state.cartitem.find((x) => x.id === item.id);
+    if (exist) {
+      dispatch({
+        type: "cartitem",
+        payload: state.cartitem.map((x) =>
+          x.id === item.id ? { ...exist, qty: exist.qty + 1 } : x
+        ),
+      });
+    } else {
+      dispatch({
+        type: "cartitem",
+        payload: [...state.cartitem, { ...item, qty: 1 }],
+      });
+    }
+  };
   return (
     <>
-      <main className="pdp-pdp-container">
-        <div className="breadcrumbs-container">
+      <main className="pdp-pdp-container  ">
+        <div className="breadcrumbs-container display-none">
           <a href="/" className="breadcrumbs-link">
             Home
           </a>
@@ -45,7 +63,7 @@ const Detail = ({ data }) => {
         </div>
         <div className="pdp-details common-clearfix">
           <div className="image-grid-container common-clearfix">
-            <div className="image-grid-col50">
+            <div className="image-grid-col50 display-none">
               <div className="image-grid-imageContainer">
                 <div
                   className="image-grid-image"
@@ -62,7 +80,9 @@ const Detail = ({ data }) => {
                 ></div>
                 <div className="image-grid-similarColorsCta undefined">
                   <span className="myn-spr image-grid-similarColorsIcon sprites-similarProductsIcon"></span>
-                  <FaOpencart style={{verticalAlign: "middle",marginLeft: "10px"}}/>
+                  <FaOpencart
+                    style={{ verticalAlign: "middle", marginLeft: "10px" }}
+                  />
                   <span className="image-grid-iconText"> VIEW SIMILAR</span>
                 </div>
                 <div className="image-grid-skeletonLoader"></div>
@@ -100,7 +120,7 @@ const Detail = ({ data }) => {
                     <span className="pdp-mrp-verbiage-amt"></span>
                   </div>
                   <div>(Incl. of all taxes)</div>
-                  <hr />
+                  <hr className="display-none" />
                   <div>
                     <span className="pdp-mrp-verbiage-amt">{discount}</span>
                   </div>
@@ -264,27 +284,21 @@ const Detail = ({ data }) => {
                 <div
                   className="pdp-add-to-bag pdp-button pdp-flex pdp-center
                   "
+                  onClick={() => onAdd(data)}
                 >
                   <span className="myn-spr pdp-whiteBag sprites-whiteBag pdp-flex pdp-center"></span>
-                  <FaShoppingBag/> &nbsp; ADD TO BAG
-                </div>
-                <div
-                  className=" pdp-add-to-wishlist pdp-button pdp-add-to-wishlist pdp-button pdp-flex pdp-center
-                  "
-                >
-                  <span className="myn-spr pdp-notWishlistedIcon sprites-notWishlisted pdp-flex pdp-center "></span><FaRegHeart/>
-                  <span className="">&nbsp; WISHLIST</span>
+                  <FaShoppingBag /> &nbsp; ADD TO BAG
                 </div>
               </div>
             </div>
 
             <div>
               <div className="pincode-deliveryContainer">
-                <h4>
+                <h4 className="display-none">
                   Delivery Options{" "}
                   <span className="myn-spr pincode-deliveryOptionsIcon sprites-deliveryOptionsIcon"></span>
                 </h4>
-                <div className="Address-switcher-container">
+                <div className="Address-switcher-container display-none">
                   <div className="Address-address-box Address-pincode-input Address-pdp-box">
                     <input type="tel" placeholder="Enter a PIN code" value="" />
                     <button
@@ -296,7 +310,7 @@ const Detail = ({ data }) => {
                     </button>
                   </div>
                 </div>
-                <p className="pincode-enterPincode">
+                <p className="pincode-enterPincode display-none">
                   Please enter PIN code to check delivery time &amp; Pay on
                   Delivery Availability
                 </p>
@@ -305,7 +319,7 @@ const Detail = ({ data }) => {
               </div>
             </div>
             <div>
-              <div className="meta-container">
+              <div className="meta-container display-footer-block">
                 <div className="meta-info">
                   <div className="meta-desc">100% Original Products</div>
                 </div>
@@ -326,7 +340,7 @@ const Detail = ({ data }) => {
                 </div>
               </div>
             </div>
-            <div className="pdp-offers-container">
+            <div className="pdp-offers-container display-none">
               <h4>
                 BEST OFFERS{" "}
                 <span className="myn-spr pdp-offers-similarColorsIcon sprites-bestOfferIcon"></span>

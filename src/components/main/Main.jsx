@@ -1,8 +1,28 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { Product } from "../../App";
 
 import ItemList from "../itemlist/ItemList";
 import "./Main.css";
-export default function Main({ data, Shorting, setWishList, wishList }) {
+export default function Main() {
+  const { state, dispatch } = useContext(Product);
+
+  const Shorting = (val) => {
+    // const pricedata1 = data.sort((a, b) => b.price - a.price);
+    // setitem([...pricedata1]);
+    // console.log("==============xxxxxxxxxxdescending", pricedata1);
+
+    if (val === "descending") {
+      const pricedata1 = state.product.sort((a, b) => b.price - a.price);
+      dispatch({ type: "product", payload: pricedata1 });
+      // setstate.product([...pricedata1]);
+      console.log("==============xxxxxxxxxxdescending", pricedata1);
+    } else {
+      const pricedata2 = state.product.sort((a, b) => a.price - b.price);
+      console.log("==============xxxxxxxxxascending", pricedata2);
+      dispatch({ type: "product", payload: pricedata2 });
+      // setitem([...pricedata2]);
+    }
+  };
   return (
     <section>
       <div
@@ -119,8 +139,8 @@ export default function Main({ data, Shorting, setWishList, wishList }) {
         </div>
       </section>
       <ul class="grid-wrapper">
-        {data.map((item) => (
-          <ItemList setWishList={setWishList} item={item} wishList={wishList} />
+        {state.product.map((item) => (
+          <ItemList item={item} />
         ))}
       </ul>
     </section>

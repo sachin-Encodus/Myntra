@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import {FaOpencart,FaRegHeart} from "react-icons/fa"
+import { FaOpencart, FaRegHeart } from "react-icons/fa";
 import "./Itemlist.css";
-const ItemList = ({ item, setWishList, wishList }) => {
+import { Product } from "../../App";
+const ItemList = ({ item }) => {
+  const { state, dispatch } = useContext(Product);
   const navigate = useNavigate();
   const NavigateToDetailPage = () => {
     navigate("/detail", { state: item });
   };
-  console.log("===========>>>>>>>>>>>>>cccccccccccc", wishList);
+
   return (
     <>
       <li
@@ -55,7 +57,7 @@ const ItemList = ({ item, setWishList, wishList }) => {
             <h4 class="product-product">{item.desc}</h4>
             <h4 class="product-sizes">
               <span class="product-sizeNoInventoryPresent">
-                {item.size[0]},{" "}
+                Size : {item.size[0]},{" "}
               </span>
               <span class="product-sizeNoInventoryPresent">
                 {item.size[1]},{" "}
@@ -85,7 +87,7 @@ const ItemList = ({ item, setWishList, wishList }) => {
           class="product-actions "
           onClick={(e) => {
             e.stopPropagation();
-            setWishList([...wishList, item]);
+            dispatch({ type: "wishlist", payload: [...state.wishlist, item] });
           }}
         >
           <span
