@@ -811,8 +811,8 @@
     display: inline-block;
     width: 42%;
     position: relative;
-    left: -650px;
-    top: 60px;
+    left: -540px;
+    top: 0px;
   }
   .pdp-action-container .pdp-goToCart,
   .pdp-action-container button {
@@ -1427,8 +1427,8 @@ div.pdp-offers-bullet {
   }
   .pdp-price-info{
     position: relative;
-    top: 555px;
-    left: -650px;
+    top: 510px;
+    left: -540px;
   }
   .meta-container{
     position: relative;
@@ -1436,8 +1436,8 @@ div.pdp-offers-bullet {
   }
   .size-buttons-size-container{
     position: relative;
-    left: -650px;
-    top: 530px;
+    left: -540px;
+    top: 510px;
   }
  .display-footer-block{
    margin-bottom: 400px;
@@ -1446,6 +1446,10 @@ div.pdp-offers-bullet {
    overflow: hidden!important;
  }
  .mobile-wishlist{
-   margin-left: 72px;
+   margin-left: 49px;
+ }
+ .pdp-pdp-container{
+   min-width: 930px;
+   margin-top: 30px;
  }
 }
